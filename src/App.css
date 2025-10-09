@@ -1,0 +1,74 @@
+.App {
+  min-height: 100vh;
+  background: -moz-linear-gradient(top, #010018 0%, #000000 100%);
+  margin: 0;
+  padding: 20px;
+  z-index: 0;
+  position: relative;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
+.name-container { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.greeting {
+  font-family: "Quintessential", serif;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.name h1 {
+  font-family: "Tourney", cursive;
+  font-style: italic;
+  font-size: 4rem;
+  font-variation-settings: 'wdth' 100, 'wght' 200;
+  margin: 0;
+  line-height: 1;
+}
+
+.profession h4 {
+  font-family: "Quintessential", serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.2; 
+  transform: scale(1); 
+}
+50% { 
+    opacity: 1; 
+    transform: scale(1.2); 
+  }
+}

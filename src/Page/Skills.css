@@ -1,0 +1,79 @@
+.skills-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: white;
+  background: transparent;
+}
+
+.skills-header {
+  margin-bottom: 3rem;
+}
+
+.skills-icon {
+  font-size: 3rem;
+  color: #1da8ff;
+  margin-bottom: 0.5rem;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  color: #1da8ff;
+  font-family: "Quintessential", serif;
+  margin: 0;
+}
+
+.skills-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skill-header h3 {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.skill-badge {
+  background-color: #1da8ff;
+  color: #000;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.skill-tech {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: left;
+}

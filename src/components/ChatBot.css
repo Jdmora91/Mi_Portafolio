@@ -1,0 +1,119 @@
+.chatbot-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chatbox {
+  width: 320px;
+  max-height: 500px;
+  background: #1e1e2f;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+}
+
+.messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: linear-gradient(to bottom, #1e1e2f, #111);
+}
+
+.message {
+  padding: 0.75rem;
+  border-radius: 10px;
+  max-width: 90%;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.message.user {
+  background-color: #214e63;
+  align-self: flex-end;
+  color: #fff;
+}
+
+.message.assistant {
+  background-color: #2a2a40;
+  align-self: flex-start;
+  color: #e2e2e2;
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #333;
+  padding: 0.75rem;
+  background-color: #111;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.input-area input::placeholder {
+  color: #888;
+}
+
+.input-area button {
+  margin-left: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #3a84ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.input-area button:hover {
+  background-color: #2563eb;
+}
+
+@media (max-width: 400px) {
+  .chatbox {
+    width: 95vw;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+}
+.chat-toggle-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1001;
+  background-color: #214e63;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.chat-toggle-button:hover {
+  background-color: #2563eb;
+  transform: scale(1.1);
+}

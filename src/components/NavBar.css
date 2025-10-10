@@ -182,3 +182,30 @@ body {
         width: 70px;
     }
 }
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.language-switcher button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background: #00aaff;
+  transform: scale(1.1);
+}
+
+.language-switcher button.active {
+  background: #00aaff;
+  border-color: #00aaff;
+}

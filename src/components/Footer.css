@@ -1,0 +1,58 @@
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-top: 2px solid #1d6ab3;
+  font-family: 'Quintessential', serif;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-title {
+  font-size: 2.5rem;
+  color: #1da1f2;
+  margin-bottom: 0.5rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2;
+  }
+  to {
+    text-shadow: 0 0 20px #0077ff, 0 0 40px #0077ff;
+  }
+}
+
+.footer-quote {
+  font-style: italic;
+  color: #cccccc;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-socials a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #1da1f2;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}

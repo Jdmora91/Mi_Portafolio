@@ -9,7 +9,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
-    color: white;
+    color: #7aa0b3ea;
     min-height: auto;
 }
 
@@ -21,10 +21,10 @@ body {
 .Title {
     font-family: "Quintessential", serif;
     font-size: 5rem;
-    color: #214e63ea;
+    color: #7aa0b3ea;
     margin-bottom: 0.5rem;
     text-align: center;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+   text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
 .Description {

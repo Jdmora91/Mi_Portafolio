@@ -1,13 +1,26 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Preloader from './components/Preloader';
 import './App.css'
 import NavBar from './components/NavBar.jsx'
 import AboutMe from './Page/AboutMe.jsx'
 import Projects from './Page/Projects.jsx'
+import ChatBot from './components/ChatBot.jsx';
+import TimeLine from './Page/TimeLine.jsx'
+import Skills from './Page/Skills.jsx'
+import Contact from './Page/Contact.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1700);
+    return () => clearTimeout(timeout);
+  }, []);
   
-  //stars 
   const stars = Array.from({ length: 150 }, (_, index) => ({
     id: index,
     top: `${Math.random() * 100}%`,
@@ -17,7 +30,7 @@ function App() {
   }));
  
 
-  // Background particles
+  
   const particles = Array.from({ length: 20 }, (_, index) => ({
     id: `particle-${index}`,
     top: `${Math.random() * 100}%`,
@@ -28,8 +41,13 @@ function App() {
   }));
 
   return (
+    <>
+      {loading ? (
+        <Preloader />
+      ) : (
     <div className="App">
       <NavBar />
+       <ChatBot />
       
       <div className="stars-container">
         {stars.map(star => (
@@ -87,8 +105,25 @@ function App() {
         <Projects />
       </section>
       </div>
-
+      <div>
+      <section id="TimeLine">
+        <TimeLine />
+      </section>
+      </div>
+       <div>
+      <section id="Skills">
+        <Skills />
+      </section>
+      </div>
+         <div>
+      <section id="Contact">
+        <Contact />
+      </section>
+      </div>
+          <Footer />
     </div>
+      )}
+    </>
   )
 }
 

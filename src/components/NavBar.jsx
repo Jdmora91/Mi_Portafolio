@@ -5,9 +5,9 @@ import {
     faHome,
     faUser,
     faProjectDiagram,
+    faRoute,
     faEnvelope,
-    faSearch,
-    faHistory,
+    faUserGear,
     faBars,
     faTimes
 } from '@fortawesome/free-solid-svg-icons'
@@ -26,8 +26,8 @@ function NavBar() {
         {id: 'home', icon: faHome, text: 'Home'},
         {id: 'profile', icon: faUser, text: 'About Me'},
         {id: 'projects', icon: faProjectDiagram, text: 'Projects'},
-        {id: 'history', icon: faHistory, text: 'History'},
-        {id: 'search', icon: faSearch, text: 'Search'},
+        {id: 'TimeLine', icon: faRoute, text: 'TimeLine'},
+        {id: 'Skills', icon: faUserGear, text: 'Skills'},
         {id: 'contact', icon: faEnvelope, text: 'Contact'},
     ];
 

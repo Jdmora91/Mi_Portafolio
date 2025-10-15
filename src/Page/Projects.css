@@ -1,27 +1,35 @@
+/* ===== Título y contenedor ===== */
+.ProjectsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  color: #fff;
+}
 
 .projects-title {
   font-family: "Quintessential", serif;
-  font-size: 4rem;
-  color: #7aa0b3ea;
+  font-size: 3rem;                  /* más equilibrado */
+  color: #7dd3fc;
   text-align: center;
-  margin-bottom: 3rem;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  margin: 0 0 1rem 0;
+  text-shadow: 0 0 20px rgba(125, 211, 252, 0.35);
 }
 
-
-.ProjectsContainer {
-  padding: 4rem 2rem;
-  color: white;
-  max-width: 1200px;
-  margin: 0 auto;
+.projects-description {
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0 auto 2.5rem auto;
 }
 
-
+/* ===== Bloques de proyecto ===== */
 .project-block {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
-  margin: 3rem 0;
+  gap: 2.25rem;                      /* un poco menos para compacto */
+  margin: 2.5rem 0;
   flex-direction: row;
 }
 
@@ -29,28 +37,60 @@
   flex-direction: row-reverse;
 }
 
-
 .project-images {
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;            /* para colocar los botones debajo */
   align-items: center;
+  justify-content: center;
+  min-width: 260px;
 }
 
 .project-thumb {
-  max-width: 320px;
   width: 100%;
+  max-width: 320px;                  /* igual a tu diseño */
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-thumb:hover {
-  transform: scale(1.03);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
 }
 
+/* Botones debajo de la imagen (‹ ›) */
+.image-nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 0.75rem;
+}
 
+.image-nav-buttons button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #7dd3fc;
+  background: rgba(125, 211, 252, 0.12);
+  color: #7dd3fc;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.2s ease, color 0.2s ease;
+}
+.image-nav-buttons button:hover {
+  background: #7dd3fc;
+  color: #0b1220;
+  transform: translateY(-1px) scale(1.06);
+}
+.image-nav-buttons button:active {
+  transform: scale(0.96);
+}
+
+/* Lado derecho: textos */
 .project-details {
   flex: 2;
   color: #e2e8f0;
@@ -59,63 +99,136 @@
 .project-details h2 {
   font-family: "Quintessential", serif;
   color: #7dd3fc;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.85rem;
+  margin: 0 0 0.6rem 0;
 }
 
-.project-description {
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+.project-description,
+.project-details p {
   font-size: 1rem;
+  line-height: 1.65;
   color: #cbd5e1;
+  margin: 0 0 1.25rem 0;
 }
-
-.project-link {
-  color: #7dd3fc;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 1px solid #7dd3fc;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
-  display: inline-block;
-}
-
-.project-link:hover {
-  background: #7dd3fc;
-  color: #0b0b20;
-}
-
 
 .project-badge {
   display: inline-block;
   background: #007bff;
-  color: white;
+  color: #fff;
   padding: 4px 8px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.6rem;
 }
 
+/* CTA */
+.project-link {
+  display: inline-block;
+  color: #7dd3fc;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #7dd3fc;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.18s ease;
+}
+.project-link:hover {
+  background: #7dd3fc;
+  color: #0b0b20;
+  transform: translateY(-1px);
+}
 
-.technologies {
+/* Separador entre proyectos */
+.project-divider {
+  margin: 2.4rem auto;
+  height: 2px;
+  width: 82%;
+  background: linear-gradient(to right, transparent, #1da8ff, transparent);
+  opacity: 0.32;
+  border-radius: 1px;
+}
+
+/* ===== Modal (mantiene estética del sitio) ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 15, 25, 0.9);
+  backdrop-filter: blur(8px);
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 15px 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.18s ease;
 }
 
-.tech-badge {
-  height: 28px;
-  margin: 2px;
-  border-radius: 4px;
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.modal-image {
+  max-width: 86vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 26px rgba(125, 211, 252, 0.35);
+}
+
+.close-modal {
+  position: absolute;
+  top: -36px;
+  right: -8px;
+  background: transparent;
+  border: none;
+  color: #7dd3fc;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, color 0.2s ease;
+}
+.close-modal:hover {
+  color: #38bdf8;
+  transform: scale(1.08);
+}
+
+/* Botones dentro del modal */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 1rem;
+}
+
+.modal-buttons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #7dd3fc;
+  background: rgba(125, 211, 252, 0.18);
+  color: #7dd3fc;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.2s ease, color 0.2s ease;
+}
+.modal-buttons button:hover {
+  background: #7dd3fc;
+  color: #0b1220;
+  transform: translateY(-1px) scale(1.06);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .project-block {
+    gap: 1.75rem;
+  }
+}
 
 @media (max-width: 768px) {
   .projects-title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .project-block,
@@ -124,32 +237,26 @@
     text-align: center;
   }
 
-  .project-images {
-    justify-content: center;
+  .project-details {
+    padding: 0 1rem;
   }
 
   .project-thumb {
     max-width: 100%;
   }
 
-  .project-details {
-    padding: 0 1rem;
+  .modal-image {
+    max-width: 94vw;
+    max-height: 70vh;
   }
 
-  .technologies {
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .tech-badge {
-    height: 24px;
+  .project-divider {
+    width: 88%;
   }
 }
-.project-divider {
-  margin: 3rem auto;
-  height: 2px;
-  width: 80%;
-  background: linear-gradient(to right, transparent, #1da8ff, transparent);
-  opacity: 0.3;
-  border-radius: 1px;
+
+/* ===== Utilidades ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

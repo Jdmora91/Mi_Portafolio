@@ -5,8 +5,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-    border-top: 1px solid rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
   margin: 4rem 0;
 }
 
@@ -24,9 +25,9 @@
 }
 
 .contact-title {
-  font-size: 4rem;
-  font-family: 'Quintessential', sherif;
-  color: #1991eb;
+  font-size: 3rem;
+  font-family: "Quintessential", serif;
+  color: #7dd3fc;
   text-shadow: 0 0 20px rgba(25, 145, 235, 0.8);
   margin-bottom: 0.5rem;
 }
@@ -55,23 +56,43 @@
 
 .social-icons a {
   color: white;
-  background-color: #2a2a2a;
+  background-color: rgba(42, 42, 42, 0.6);
   padding: 0.6rem;
   border-radius: 12px;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .social-icons a:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
   background-color: #1991eb;
 }
 
 .contact-info {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-family: serif;
   color: #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
+}
+
+.Phone {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.3rem;
+  }
+
+  .social-icons {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+
+  .contact-info {
+    font-size: 1.1rem;
+  }
 }

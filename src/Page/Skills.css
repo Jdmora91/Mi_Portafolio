@@ -43,10 +43,8 @@
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  position: relative;
   transition: transform 0.3s ease;
 }
-
 .skill-card:hover {
   transform: translateY(-5px);
 }
@@ -76,4 +74,14 @@
   font-size: 0.9rem;
   color: #aaa;
   text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+  .skills-icon {
+    font-size: 2.5rem;
+  }
 }

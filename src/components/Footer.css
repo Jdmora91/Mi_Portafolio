@@ -4,13 +4,18 @@
   text-align: center;
   padding: 3rem 1rem;
   border-top: 2px solid #1d6ab3;
-  font-family: 'Quintessential', serif;
+  font-family: "Quintessential", serif;
   position: relative;
   z-index: 10;
 }
 
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .footer-title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #1da1f2;
   margin-bottom: 0.5rem;
   animation: glow 2s ease-in-out infinite alternate;
@@ -54,5 +59,18 @@
   border-top: 1px solid #333;
   padding-top: 1rem;
   font-size: 0.9rem;
-  color: #888;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 1.8rem;
+  }
+  .footer-quote {
+    font-size: 1rem;
+  }
+  .footer-socials a {
+    font-size: 1.5rem;
+  }
 }

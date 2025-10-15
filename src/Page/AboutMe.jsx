@@ -1,85 +1,108 @@
-import React, { useState } from 'react'
-import './AboutMe.css'
-import photo from '../assets/jd.jpg'
+import React, { useState } from "react";
+import "./AboutMe.css";
+import photo from "../assets/jd.jpg";
+import translations from "../i18n/translations";
 
-function AboutMe() {
-  const [isExpanded, setIsExpanded] = useState(false)
+function AboutMe({ language }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleExpand = () => setIsExpanded(!isExpanded);
 
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded)
-  }
+  const t = translations[language].about;
 
   return (
     <div className="AboutMe">
       <div className="Presentation">
-        <h1 className='Title'>About Me</h1>
-        
-        <div className={`Description ${isExpanded ? 'expanded' : ''}`}>
-          Howdy! My name is Jose Mora, but you can call me Jose. I'm a 34-year-old Costa Rican developer who loves creating meaningful digital experiences.
-          
-          <br /><br />
-          
-          My journey into tech is anything but conventional. After dedicating nine years to healthcare (2013-2022), I took a leap of faith and moved to the United States in 2022 to pursue my passion for programming. There, I immersed myself in coding at 4Geeks Academy, completing an intensive 8-month Full Stack Developer program.
-          
-          <br /><br />
-          
-          I returned to Costa Rica in 2025 to fully commit to my programming career. What drives me is the belief that coding isn't just a job—it's a craft I'm passionate about perfecting every day.
-          
+        <h1 className="Title">{t.title}</h1>
+
+        <div className={`Description ${isExpanded ? "expanded" : ""}`}>
+          <p>{t.paragraph1}</p>
+          <br />
+          <p>{t.paragraph2}</p>
+          <br />
+          <p>{t.paragraph3}</p>
+
           {isExpanded && (
             <>
-              <br /><br />
-              
-              <strong>My core values:</strong> Discipline, responsibility, and above all, <strong>LOYALTY</strong>.
-              
               <br />
-              
-    
-              <strong>Interests:</strong> Photography, travel, language learning, cultural exploration, and gaming
-              <br />
-              <strong>Goals:</strong> Experience life in Nordic countries & Australia, become an Epic Games developer
+              <strong>
+                {language === "en"
+                  ? "My core values:"
+                  : "Mis valores fundamentales:"}
+              </strong>{" "}
+              {language === "en"
+                ? "Discipline, responsibility, and loyalty."
+                : "Disciplina, responsabilidad y lealtad."}
 
               <br />
-
-              <strong>Life philosophy:</strong> "Life is just a little moment" — a reminder to make every second count.
+              <strong>{language === "en" ? "Interests:" : "Intereses:"}</strong>{" "}
+              {language === "en"
+                ? "Photography, travel, languages, culture, and gaming."
+                : "Fotografía, viajes, idiomas, cultura y videojuegos."}
 
               <br />
+              <strong>{language === "en" ? "Goals:" : "Metas:"}</strong>{" "}
+              {language === "en"
+                ? "Experience life in Nordic countries & Australia; work with Epic Games."
+                : "Vivir en países nórdicos y Australia; trabajar con Epic Games."}
 
-              I'm confident that any team I join will gain not just a developer, but a deeply committed and passionate collaborator.
-              
-              <div className="ContactSection">
-                <h3 className="ContactTitle">Get in touch!</h3>
-                <p>Let's create something amazing together</p>
-              </div>
+              <br />
+              <strong>
+                {language === "en"
+                  ? "Life philosophy:"
+                  : "Filosofía de vida:"}
+              </strong>{" "}
+              {language === "en"
+                ? `"Life is just a little moment" — a reminder to make every second count.`
+                : `"La vida es solo un pequeño momento" — un recordatorio de aprovechar cada segundo.`}
             </>
           )}
-          
-          <button 
-            className="ReadMoreBtn"
-            onClick={toggleExpand}
-          >
-            {isExpanded ? 'Less' : 'More...'}
+
+          <button className="ReadMoreBtn" onClick={toggleExpand}>
+            {isExpanded
+              ? language === "en"
+                ? "Less"
+                : "Menos"
+              : language === "en"
+              ? "More..."
+              : "Más..."}
           </button>
         </div>
       </div>
-      <div className="divider">
-      <div className="PhotoContainer">
-        <img src={photo} alt="Jose Mora" className='Photo' />
-      </div>
-        <div className="social-links">
-    <a href="https://www.linkedin.com/in/jose-donis-mora-ramirez-870284321/" target="_blank" rel="noopener noreferrer" className="social-link">
-      <i className="fab fa-linkedin"></i>
-    </a>
-    <a href="https://facebook.com/jose.donis.mora.2025" target="_blank" rel="noopener noreferrer" className="social-link">
-      <i className="fab fa-facebook"></i>
-    </a>
-    <a href="https://github.com/jdmora91" target="_blank" rel="noopener noreferrer" className="social-link">
-      <i className="fab fa-github"></i>
-    </a>
-    </div>
-  </div>
-</div>
 
-  )
+      <div className="divider">
+        <div className="PhotoContainer">
+          <img src={photo} alt="Jose Mora" className="Photo" />
+        </div>
+
+        <div className="social-links">
+          <a
+            href="https://www.linkedin.com/in/jose-donis-mora-ramirez-870284321/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://facebook.com/jose.donis.mora.2025"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <i className="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://github.com/jdmora91"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default AboutMe
+export default AboutMe;

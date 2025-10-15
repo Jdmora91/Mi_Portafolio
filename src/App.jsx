@@ -51,6 +51,8 @@ function App() {
         <div className="App">
           <NavBar language={language} toggleLanguage={toggleLanguage} />
           <ChatBot language={language} />
+
+          {/* Stars Background */}
           <div className="stars-container">
             {stars.map((star) => (
               <span
@@ -67,6 +69,7 @@ function App() {
             ))}
           </div>
 
+          {/* Particles Background */}
           <div className="particles">
             {particles.map((particle) => (
               <div
@@ -84,16 +87,43 @@ function App() {
             ))}
           </div>
 
+          {/* HERO SECTION */}
           <section id="home">
             <div className="main-container">
               <div className="name-container">
                 <p className="greeting">{t.greeting}</p>
                 <h1 className="name">{t.name}</h1>
                 <h4 className="profession">{t.role}</h4>
+
+                {/* === CTA Buttons === */}
+                <div className="cta-buttons">
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("projects")
+                        .scrollIntoView({ behavior: "smooth" })
+                    }
+                    className="cta-btn"
+                  >
+                    {language === "es" ? "Ver mis proyectos" : "View my projects"}
+                  </button>
+
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("Contact")
+                        .scrollIntoView({ behavior: "smooth" })
+                    }
+                    className="cta-btn-outline"
+                  >
+                    {language === "es" ? "Contáctame" : "Contact me"}
+                  </button>
+                </div>
               </div>
             </div>
           </section>
 
+          {/* OTHER SECTIONS */}
           <section id="profile">
             <AboutMe language={language} />
           </section>

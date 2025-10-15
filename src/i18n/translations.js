@@ -11,7 +11,7 @@ const translations = {
     home: {
       greeting: "Hello, I'm",
       name: "José Donis Mora Ramírez",
-      role: "Full Stack Developer Junior",
+      role: "Web Developer Junior  |  Frond-End",
     },
     about: {
       title: "About Me",

@@ -70,6 +70,22 @@ function Projects({ language }) {
       link: "https://pura-vida-tech.vercel.app/",
       badge: language === "en" ? "PERSONAL PROJECT" : "PROYECTO PERSONAL",
     },
+    {
+      images: [
+        "./ChefCalderon/home.jpg",
+        "./ChefCalderon/about.jpg",
+        "./ChefCalderon/gallery.jpg",
+        "./ChefCalderon/review.jpg",
+        "./ChefCalderon/contact.jpg",
+      ],
+      title: "Chef Calderon",
+      description:
+        language === "en"
+          ? "A website for a professional Costa Rican chef showcasing his signature dishes, offering private services and exclusive events with a high level of elegance — designed to meet the expectations of both Costa Rican and international clients"
+          : "Página web para chef costarricense profesional en cocina, en el cual muestra sus platillos y ofrece servicios y eventos con un alto grado de elegancia y una página moderna basada en las necesidades de los ciudadanos costarricenses y extranjeros.",
+      link: "https://demo-restaurante-two.vercel.app/",
+      badge: language === "en" ? "PERSONAL PROJECT" : "PROYECTO PERSONAL",
+    },
   ];
 
   const [imageIndices, setImageIndices] = useState(projects.map(() => 0));

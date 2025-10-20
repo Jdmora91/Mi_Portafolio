@@ -6,6 +6,28 @@ function Projects({ language }) {
   const t = translations[language].projects;
 
   const projects = [
+        {
+      images: [
+        "/DemoBienesR/homeFranc.png", 
+        "/DemoBienesR/home12.png",
+        "/DemoBienesR/zona.png",
+        "/DemoBienesR/zona1.png",
+        "/DemoBienesR/zona2.png",
+        "/DemoBienesR/propiedades1.png",
+        "/DemoBienesR/galeria.png",
+        "/DemoBienesR/galeria1.png",
+        "/DemoBienesR/contactenos.png",
+        "/DemoBienesR/contactenos2.png"
+
+      ],
+      title: "Pagina Web de Bienes Raíces",
+      description:
+        language === "en"
+          ? "Modern website for a real estate company with multiple sections, 5 different languages, property gallery, and contact form."
+          : "Sitio web moderno para empresa de bienes raíces con múltiples secciones, 5 idiomas diferentes, galería de propiedades y formulario de contacto.",
+      link: "https://demo-bienesyraices.netlify.app/",
+      badge: language === "en" ? "PERSONAL PROJECT" : "PROYECTO PERSONAL",
+    },
     {
       images: ["/BarberShop/home.png", "/BarberShop/Agenda.png"],
       title: "BarberShop Book Website",

@@ -25,7 +25,7 @@ function Projects({ language }) {
         language === "en"
           ? "Modern website for a real estate company with multiple sections, 5 different languages, property gallery, and contact form."
           : "Sitio web moderno para empresa de bienes raíces con múltiples secciones, 5 idiomas diferentes, galería de propiedades y formulario de contacto.",
-      link: "https://demo-bienesyraices.netlify.app/",
+      link: "https://demo-bienes-raices.vercel.app/",
       badge: language === "en" ? "PERSONAL PROJECT" : "PROYECTO PERSONAL",
     },
     {

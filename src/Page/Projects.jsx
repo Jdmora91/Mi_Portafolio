@@ -108,6 +108,22 @@ function Projects({ language }) {
       link: "https://demo-restaurante-two.vercel.app/",
       badge: language === "en" ? "PERSONAL PROJECT" : "PROYECTO PERSONAL",
     },
+    {
+      images: [
+        "./DemoClinica/Home.png",
+        "./DemoClinica/contact.png",
+        "./DemoClinica/location.png",
+        "./DemoClinica/Team.png",
+        "./DemoClinica/testimonial.png",
+      ],
+      title: "Demo-Clinica",
+      description:
+        language === "en"
+          ? "Modern and elegant website for a Costa Rican medical clinic, showcasing its services, professional team, and location with a human and trustworthy approach. Features premium visuals, testimonials, contact tools, and a patient-friendly experience for both locals and international visitors."
+          : "Página web moderna y elegante para una clínica médica costarricense, diseñada para mostrar sus servicios, equipo profesional y ubicación con un enfoque humano y confiable. Incluye secciones visuales premium, testimonios, contacto y herramientas prácticas para pacientes tanto locales como extranjeros.",
+          link: "https://mi-portafolio-vert-eight.vercel.app/",
+      badge: language === "en" ? "PERSONAL PROJECT" : "PROYECTO PERSONAL",
+    },
   ];
 
   const [imageIndices, setImageIndices] = useState(projects.map(() => 0));

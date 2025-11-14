@@ -121,7 +121,27 @@ function Projects({ language }) {
         language === "en"
           ? "Modern and elegant website for a Costa Rican medical clinic, showcasing its services, professional team, and location with a human and trustworthy approach. Features premium visuals, testimonials, contact tools, and a patient-friendly experience for both locals and international visitors."
           : "Página web moderna y elegante para una clínica médica costarricense, diseñada para mostrar sus servicios, equipo profesional y ubicación con un enfoque humano y confiable. Incluye secciones visuales premium, testimonios, contacto y herramientas prácticas para pacientes tanto locales como extranjeros.",
-          link: "https://mi-portafolio-vert-eight.vercel.app/",
+          link: "https://demo-clinica-puravida.vercel.app/",
+      badge: language === "en" ? "PERSONAL PROJECT" : "PROYECTO PERSONAL",
+    },
+    {
+      images: [
+        "./DemoHotel/hotel.png",
+        "./DemoHotel/habitaciones.png",
+        "./DemoHotel/amenidades1.png",
+        "./DemoHotel/habitaciones.png",
+        "./DemoHotel/contactenos.png",
+        "./DemoHotel/reservas.png",
+        "./DemoHotel/ubicacion.png",
+        "./DemoHotel/galeria.png",
+        "./DemoHotel/footer.png",
+      ],
+      title: "Demo-Hotel",
+      description:
+        language === "en"
+          ? "Modern and sophisticated website for a boutique hotel in Costa Rica, showcasing its luxury experience, exclusive spaces, and natural essence. Features an immersive gallery, smooth navigation, bilingual pages, and clear reservation tools to provide a premium visual experience for both local and international travelers."
+          : "Sitio web moderno y sofisticado para un hotel boutique en Costa Rica, diseñado para resaltar su experiencia de lujo, espacios exclusivos y esencia natural. Incluye galería inmersiva, navegación fluida, secciones bilingües y herramientas de reservación que ofrecen una experiencia visual premium para turistas nacionales e internacionales.",
+          link: "https://demo-hotel-pura-vida.vercel.app/",
       badge: language === "en" ? "PERSONAL PROJECT" : "PROYECTO PERSONAL",
     },
   ];
